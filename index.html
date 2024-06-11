@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Hello World</title>
+    <title>Component Demo</title>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
@@ -13,21 +13,10 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
-      const Card = (props) => {
-        return (
-          <div className='cardContainer'>
-            <h2>{props.cardName}</h2>
-            <p>Card information</p>
-          </div>
-        );
-      };
       const MyApp = () => {
         return (
           <div className='container'>
             <h3>Component Test</h3>
-            <Card cardName='Card 1' />
-            <Card cardName='Card 2' />
-            <Card cardName='Card 3' />
           </div>
         );
       };
