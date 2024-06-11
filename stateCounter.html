@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>State Demo</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <h1>State Demo</h1>
+    <div id="root"></div>
+    <script type="text/babel">
+      const MyApp = () => {
+        const [myCounter, setMyCounter] = React.useState(0);
+        const incrementCount = () => {
+          setMyCounter(myCounter + 1);
+          console.info(myCounter);
+        };
+        return (
+          <>
+            <h2>Counter: {myCounter}</h2>
+            <button onClick={incrementCount}>Increment Value</button>
+          </>
+        );
+      };
+
+      const container = document.getElementById("root");
+      const root = ReactDOM.createRoot(container);
+      root.render(<MyApp />);
+    </script>
+  </body>
+</html>
